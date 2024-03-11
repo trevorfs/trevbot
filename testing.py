@@ -15,7 +15,7 @@ async def on_ready():
     async def send_hourly_message():
         while True:
             await asyncio.sleep(3600)  # Delay 2 detik
-            channel_ids = [1161883711353135214, 1161883899425722368, 1161883867163144223, 1161883932443291721, 1161883972276600922, 1161884002051952650, 1161884035824500747, 1161884072935706634, 1161884110533443704, 1161884144733798565]  # Ganti dengan daftar ID saluran yang diinginkan
+            channel_ids = []  # Ganti dengan daftar ID saluran yang diinginkan
             for channel_id in channel_ids:
                 channel = client.get_channel(channel_id)
                 await channel.send('.hourly')
@@ -26,7 +26,7 @@ async def on_ready():
     async def send_daily_message():
         while True:
             await asyncio.sleep(86400)  # Delay 24 jam (86400 detik)
-            channel_ids = [1161883711353135214, 1161883899425722368, 1161883867163144223, 1161883932443291721, 1161883972276600922, 1161884002051952650, 1161884035824500747, 1161884072935706634, 1161884110533443704, 1161884144733798565]  # Ganti dengan daftar ID saluran yang diinginkan
+            channel_ids = []  # Ganti dengan daftar ID saluran yang diinginkan
             for channel_id in channel_ids:
                 channel = client.get_channel(channel_id)
                 await channel.send('tdaily')
@@ -38,4 +38,4 @@ async def on_ready():
     client.loop.create_task(send_daily_message())
 
 # Ganti TOKEN_BOT dengan token bot Anda
-client.run('NDQ4ODYyODgxODI4NTY5MDk5.GjncxD.HOUG-Ib-7miT6MiCcIQ1ltbk8lC6ZadmnB_i4E')
+client.run('')
